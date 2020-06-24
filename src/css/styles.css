@@ -1,0 +1,61 @@
+*{
+  margin: 0;
+  color: #7fcd91;
+}
+
+.header{
+  width: 100%;
+  height: 70px;
+  background-color: #42464d; /* 222831 */
+  display: flex;
+  align-items: center;
+  -webkit-box-shadow: 0px 8px 10px -6px #0000005b; 
+  box-shadow: 0px 8px 10px -6px #0000005b;
+  position: relative;
+  z-index: 1;
+}
+
+.header--img{
+  width: 60px;
+}
+
+.header--title{
+  font-family: 'Balsamiq Sans', cursive;
+  font-size: 2.5rem;
+}
+
+
+.main_container{
+  /* background: linear-gradient(#393e46, #99b898); */
+  background-color: #42464d;
+  height: 500px;
+}
+
+
+
+/* ------------------------------------------------------------------------------------------------ */
+/* Barra inferior */
+
+.footer {
+  font-family: 'MuseoModerno', cursive;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  align-items: center;
+  justify-content: start;
+  height: 100px;
+  width: 100%;
+  background-color: #42464d;
+}
+
+.footer a, p{
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  padding-left: 30px;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
