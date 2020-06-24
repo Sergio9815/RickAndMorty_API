@@ -46,6 +46,7 @@
 
 .header--options li a:hover {
   text-decoration: underline;
+  color: #64DD5B;
 }
 
 /* ------------------------------------------------------------------------------------------------ */
@@ -61,7 +62,7 @@
 .main__container--title{
   font-size: 1.5rem;
   padding-top: 50px;
-  color: #7fcd91;
+  color: #64DD5B;
 }
 
 .main__container--desc{
@@ -74,6 +75,11 @@
 .main__container--desc a{
   text-decoration: none;
   color: #43accc;
+}
+
+.main__container--desc a:hover{
+  text-decoration: underline;
+  color: #cc4383;
 }
 
 .main__container img{
@@ -106,4 +112,5 @@
 
 .footer a:hover {
   text-decoration: underline;
+  color: #64DD5B;
 }
