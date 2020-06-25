@@ -1,8 +1,8 @@
 # RickAndMorty_API
 
 
-On this site you can find information about your favorite scientist and his influential grandson. In addition to all the characters in the series, as well as information about them. 
+On this site you can find information about your favorite scientist and his unfortunate grandson. In addition to other characters that appear in the series, as well as information about them. The purpose of this project was to practice what was learned about asynchronism in JavaScript. 
 
 API 
 ------------------------------------------------------------------------------------------------
-For the construction of this website the series API was used: The Rick and Morty API https://rickandmortyapi.com/
+For this I made use of an asynchronous function to make requests to the API, the same that you can visit in: Rick and Morty's API https://rickandmortyapi.com/.
