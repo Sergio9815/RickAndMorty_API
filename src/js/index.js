@@ -1,6 +1,7 @@
+/* ---------- API URL ---------- */
 const API = "https://rickandmortyapi.com/api/character/";
-//let XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
+/* ---------- ARRAYS FOR CHARACTER DATA ---------- */
 const name = [
   document.querySelector(".addName1"),
   document.querySelector(".addName2"),
@@ -56,35 +57,39 @@ const images = [
   document.querySelector(".addImg8"),
 ];
 
+/* ---------- FUNCTION FOR API REQUEST ---------- */
 const request = (url_api) => {
   return new Promise((resolve, reject) => {
-    let xhttp = new XMLHttpRequest();
-    xhttp.open("GET", url_api, true);
-    xhttp.onreadystatechange = () => {
-      if (xhttp.readyState === 4) {
+    let xhttp = new XMLHttpRequest(); // DEFINE CONNECTION
+    xhttp.open("GET", url_api, true); // OPEN CONNECTION 
+    xhttp.onreadystatechange = () => { 
+      if (xhttp.readyState === 4) { // VERIFY CONNECTION
         xhttp.status === 200
           ? resolve(JSON.parse(xhttp.responseText))
           : reject(new Error("Error " + url_api));
       }
     };
-    xhttp.send();
+    xhttp.send(); // SEND REQUEST
   });
 };
 
 const requestFunction = async (url) => {
   try {
-    /* Character ONE */
     var j = 0;
     for (let i = 0; i < images.length; i++) {
 
+      /* ---------- SPECIAL CHARACTERS ---------- */
       if (i === 5) j = 16;
       else if (i === 6) j = 10;
       else if (i === 7) j = 11;
       else j = i;
       
+      /* ---------- MAKE REQUEST ---------- */
       var data = await request(url);
       var character = await request(`${url}${data.results[j].id}`);
       var origin = await request(`${character.origin.url}`);
+
+      /* ---------- INSERT DATA INTO CARDS ---------- */
       name[i].innerHTML = `Name: ${character.name}`;
       status[i].innerHTML = `Status: ${character.status}`;
       species[i].innerHTML = `Specie: ${character.species}`;
@@ -97,4 +102,5 @@ const requestFunction = async (url) => {
   }
 };
 
+/* ---------- CALL MAIN FUNCTION ---------- */
 requestFunction(API);

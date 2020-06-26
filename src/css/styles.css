@@ -1,54 +1,62 @@
-*{
+* {
   margin: 0;
   font-family: 'Fira Sans', sans-serif;
+  outline: none;
 }
 
 /* ------------------------------------------------------------------------------------------------ */
 
 /* Title bar */
 
-.header{
+.header {
   width: 100%;
   height: 70px;
   color: #ffffff;
-  background-color: #42464d; /* 222831 */
+  background-color: #42464d;
+  /* 222831 */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  -webkit-box-shadow: 0px 8px 10px -6px #0000005b; 
+  -webkit-box-shadow: 0px 8px 10px -6px #0000005b;
   box-shadow: 0px 8px 10px -6px #0000005b;
   position: relative;
   z-index: 1;
 }
 
-.header--title{
+.header--title {
   padding-left: 50px;
 }
 
-.header--options{
+.header--info {
   padding-right: 50px;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.header--options ul{
+#git {
+  width: 50px;
+}
+
+.header--info ul {
   list-style: none;
-  padding-left: 50px;
+  padding-left: 5px;
   text-align: right;
   display: flex;
   justify-content: space-around;
 }
 
-.header--options li {
+.header--info li {
   display: flex;
   padding-left: 10px;
 }
 
-.header--options li a {
+.header--info li a {
   text-decoration: none;
   color: aliceblue;
 }
 
-.header--options li a:hover {
+.header--info li a:hover {
   /* text-decoration: underline; */
   color: #43accc;
 }
@@ -57,20 +65,26 @@
 
 /* Information section */
 
-.main__container{
+.main__container {
   width: 100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.main__container--title{
+.main__container--details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-title {
   font-size: 1.5rem;
   padding-top: 50px;
   color: #64DD5B;
 }
 
-.main__container--desc{
+.main-desc {
   font-size: 1.0rem;
   padding-top: 15px;
   color: #444444;
@@ -78,17 +92,17 @@
   line-height: 30px;
 }
 
-.main__container--desc a{
+.main-desc a {
   text-decoration: none;
   color: #43accc;
 }
 
-.main__container--desc a:hover{
+.main-desc a:hover {
   text-decoration: underline;
   color: #cc4383;
 }
 
-.main__container img{
+.main__container img {
   width: 600px;
   object-fit: cover;
 }
@@ -98,7 +112,7 @@
 
 /* Character section */
 
-.character__container{
+.character__container {
   width: 100%;
   display: flex;
   background-color: rgb(240, 240, 240);
@@ -110,14 +124,14 @@
   flex-wrap: wrap;
 }
 
-.character--title{
+.character--title {
   font-size: 1.5rem;
   padding-top: 50px;
   color: #64DD5B;
   margin-bottom: 10px;
 }
 
-.character__grid{
+.character__grid {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -125,7 +139,7 @@
   flex-wrap: wrap;
 }
 
-.character--card{
+.character--card {
   width: 260px;
   height: 370px;
   margin: 20px;
@@ -137,18 +151,18 @@
   flex-direction: column;
   justify-content: center;
   text-align: left;
-  -webkit-box-shadow: 0px 8px 10px -6px #0000005b; 
+  -webkit-box-shadow: 0px 8px 10px -6px #0000005b;
   box-shadow: 0px 8px 10px -6px #0000005b;
 }
 
-.character--card img{
+.character--card img {
   object-fit: cover;
   width: 240px;
   height: 240px;
   align-self: center;
 }
 
-.card--details{
+.card--details {
   height: 80px;
   margin-top: 20px;
   color: gray;
@@ -163,9 +177,7 @@
 /* Footer bar */
 
 .footer {
-  display: flex;/* 
-  position: absolute;
-  bottom: 0; */
+  display: flex;
   align-items: center;
   justify-content: start;
   height: 100px;
@@ -173,7 +185,8 @@
   background-color: #42464d;
 }
 
-.footer a, .footer-text{
+.footer a,
+.footer-text {
   color: white;
   font-size: 14px;
   cursor: pointer;

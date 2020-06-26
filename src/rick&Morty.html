@@ -12,29 +12,41 @@
 </head>
 
 <body>
+
+  <!-- ---------- HEADER SECTION ---------- -->
+
   <header class="header">
-    <h1 class="header--title">Rick and Morty</h1>
-    <div class="header--options">
+    <h1 tabindex="0" class="header--title">Rick and Morty</h1>
+    <div class="header--info">
+      <img tabindex="0" id="git" src="/home/sergio/Github/RickAndMorty_API/src/img/icon-github.png" alt="Github logo">
       <ul>
         <li><a href="https://github.com/Sergio9815/RickAndMorty_API">My github</a></li>
       </ul>
     </div>
   </header>
 
+  <!-- ------------------------------------ -->
+
+  <!-- ---------- TITLE SECTION ---------- -->
+
   <section class="main__container">
     <div class="main__container--details">
-      <h4 class="main__container--title">JavaScript Asynchronism</h4>
-      <p class="main__container--desc">On this site you can find information about your favorite scientist <br> 
+      <h4 tabindex="0" class="main-title">JavaScript Asynchronism</h4>
+      <p tabindex="0" class="main-desc">On this site you can find information about your favorite scientist <br> 
         and his unfortunate grandson. In addition to other characters <br> that appear in the series, as well as information about them. <br>
       <br> The purpose of this project was to practice what was learned <br> about asynchronism in JavaScript. For this I made use of an <br>
         asynchronous function to make requests to the API, the same <br> that you can visit in:
         <em><b><a href="https://rickandmortyapi.com/">Rick and Morty's API.</a></b></em></p>
     </div>
-    <img src="/home/sergio/Github/RickAndMorty_API/src/img/wallpaper-3.jpg" alt="Rick and Morty">
+    <img tabindex="0" src="/home/sergio/Github/RickAndMorty_API/src/img/wallpaper-3.jpg" alt="Rick and Morty">
   </section>
 
+  <!-- ----------------------------------- -->
+
+  <!-- ---------- CHARACTERS SECTION ---------- -->
+
   <section class="character__container">
-    <h3 class="character--title">Characters</h3>
+    <h3 tabindex="0" class="character--title">Characters</h3>
     <div class="character__grid">
 
       <div class="character--card">
@@ -116,9 +128,13 @@
           <h5 class="card-origin addOrigin8">Origin</h5>
         </div>
       </div>
-      
+
     </div>
   </section>
+
+  <!-- ---------------------------------------- -->
+
+  <!-- ---------- INFORMATION SECTION ---------- -->
 
   <script src="/home/sergio/Github/RickAndMorty_API/src/js/index.js"></script>
 
@@ -126,6 +142,8 @@
     <p class="footer-text">Author: Sergio González</p>
     <a href="https://platzi.com/clases/asincronismo-js/">Platzi: Asincronismo con JavaScript</a>
   </footer>
+
+  <!-- ----------------------------------------- -->
 
 </body>
 
