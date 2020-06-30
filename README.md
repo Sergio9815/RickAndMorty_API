@@ -10,12 +10,3 @@ Site link
 ------------------------------------------------------------------------------------------------
 
 You can access the site from the following address: https://randmapitest.netlify.app/
-
-------------------------------------------------------------------------------------------------
-Site preview
-------------------------------------------------------------------------------------------------
-![alt text](https://raw.githubusercontent.com/Sergio9815/RickAndMorty_API/master/src/captures/site_preview_01.png)
-
-![alt text](https://raw.githubusercontent.com/Sergio9815/RickAndMorty_API/master/src/captures/site_preview_02.png)
-
-![alt text](https://raw.githubusercontent.com/Sergio9815/RickAndMorty_API/master/src/captures/site_preview_03.png)
