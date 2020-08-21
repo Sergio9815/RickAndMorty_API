@@ -4,4 +4,4 @@
 Site link
 ------------------------------------------------------------------------------------------------
 
-You can access the site from the following address: https://randmapitest.netlify.app/
+Disponible en: https://randmapitest.netlify.app/
