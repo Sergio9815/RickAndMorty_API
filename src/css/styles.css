@@ -72,6 +72,7 @@
 
 .main__container--details {
   flex-direction: column;
+  width: 400px;
 }
 
 .main-title {
