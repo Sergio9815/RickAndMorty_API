@@ -1,5 +1,5 @@
 /* ---------- API URL ---------- */
-const API = "https://rickandmortyapi.com/api/character/";
+const API = "https://rickandmortyapi.com/api/character?page=";
 
 /* ---------- ARRAYS FOR CHARACTER DATA ---------- */
 const name = [
@@ -62,44 +62,48 @@ const request = (url_api) => {
   return new Promise((resolve, reject) => {
     let xhttp = new XMLHttpRequest(); // DEFINE CONNECTION
     xhttp.open("GET", url_api, true); // OPEN CONNECTION 
-    xhttp.onreadystatechange = () => { 
+    xhttp.onreadystatechange = () => {
       if (xhttp.readyState === 4) { // VERIFY CONNECTION
         xhttp.status === 200
           ? resolve(JSON.parse(xhttp.responseText))
           : reject(new Error("Error " + url_api));
       }
     };
+    //debugger
     xhttp.send(); // SEND REQUEST
   });
 };
 
-const requestFunction = async (url) => {
+const ramdom = (min, max) => {
+  return Math.random() * (max - min) + min;
+}
+
+const requestFunction = async (api) => {
+
+  let number = Math.round(ramdom(0, 35));
+  url = api.replace("=", `=${number}`);
+
+  console.log(url);
   try {
-    var j = 0;
     for (let i = 0; i < images.length; i++) {
 
-      /* ---------- SPECIAL CHARACTERS ---------- */
-      if (i === 5) j = 16;
-      else if (i === 6) j = 10;
-      else if (i === 7) j = 11;
-      else j = i;
-      
       /* ---------- MAKE REQUEST ---------- */
       var data = await request(url);
-      var character = await request(`${url}${data.results[j].id}`);
-      var origin = await request(`${character.origin.url}`);
-
+      //console.log(data);
+      var character = data.results[i];
+      //console.log(character);
+      
       /* ---------- INSERT DATA INTO CARDS ---------- */
       name[i].innerHTML = `Name: ${character.name}`;
       status[i].innerHTML = `Status: ${character.status}`;
       species[i].innerHTML = `Specie: ${character.species}`;
-      dimension[i].innerHTML = `Origin: ${origin.dimension}`;
+      dimension[i].innerHTML = `Origin: ${character.origin.name}`;
       images[i].src = character.image;
-      j++;
     }
   } catch (error) {
     console.log(error);
   }
+
 };
 
 /* ---------- CALL MAIN FUNCTION ---------- */
