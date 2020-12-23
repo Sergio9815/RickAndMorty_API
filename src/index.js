@@ -83,22 +83,19 @@ const requestFunction = async (api) => {
   let number = Math.round(ramdom(0, 35));
   url = api.replace("=", `=${number}`);
 
-  console.log(url);
+  /* ---------- MAKE REQUEST ---------- */
+  let data = await request(url);
+
   try {
     for (let i = 0; i < images.length; i++) {
-
-      /* ---------- MAKE REQUEST ---------- */
-      var data = await request(url);
-      //console.log(data);
       var character = data.results[i];
-      //console.log(character);
-      
+
       /* ---------- INSERT DATA INTO CARDS ---------- */
+      images[i].src = character.image;
       name[i].innerHTML = `Name: ${character.name}`;
       status[i].innerHTML = `Status: ${character.status}`;
       species[i].innerHTML = `Specie: ${character.species}`;
       dimension[i].innerHTML = `Origin: ${character.origin.name}`;
-      images[i].src = character.image;
     }
   } catch (error) {
     console.log(error);
