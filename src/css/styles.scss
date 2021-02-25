@@ -1,22 +1,22 @@
 $color-topBar: #42464d;
 $color-Link: #43accc;
-$color-title: #64DD5B;
+$color-title: #64dd5b;
 $color-Hover: #cc4383;
 $color-font: #444444;
 
-%shadow{
+%shadow {
   -webkit-box-shadow: 0px 8px 10px -6px #0000005b;
   box-shadow: 0px 8px 10px -6px #0000005b;
 }
 
-%flex{
+%flex {
   display: flex;
   align-items: center;
 }
 
 * {
   margin: 0;
-  font-family: 'Fira Sans', sans-serif;
+  font-family: "Fira Sans", sans-serif;
   outline: none;
 }
 
@@ -43,6 +43,7 @@ $color-font: #444444;
 #git {
   width: 50px;
 }
+
 .header--info {
   padding-right: 50px;
   @extend %flex;
@@ -60,14 +61,14 @@ $color-font: #444444;
     display: flex;
     padding-left: 10px;
   }
-  
+
   li a {
     text-decoration: none;
     color: white;
   }
 
   a:hover {
-    color:$color-Link;
+    color: $color-Link;
   }
 }
 
@@ -85,7 +86,6 @@ $color-font: #444444;
     width: 600px;
     object-fit: cover;
   }
-
 }
 
 .main__container--details {
@@ -101,7 +101,7 @@ $color-font: #444444;
 }
 
 .main-desc {
-  font-size: 1.0rem;
+  font-size: 1rem;
   padding-top: 15px;
   color: $color-font;
   text-align: justify;
@@ -109,7 +109,7 @@ $color-font: #444444;
 
   a {
     text-decoration: none;
-    color:$color-Link;
+    color: $color-Link;
   }
 
   a:hover {
@@ -160,7 +160,7 @@ $color-font: #444444;
   justify-content: center;
   text-align: left;
   @extend %shadow;
-  
+
   img {
     object-fit: cover;
     width: 240px;
@@ -176,6 +176,30 @@ $color-font: #444444;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+
+.refresh_Button {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#btn-r {
+  background-color: #64dd5b;
+  color: white;
+  border-radius: 50px;
+  padding: 5px 32px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-color: transparent;
+  text-decoration: none;
+}
+
+#btn-r:hover {
+  background-color: lightcoral;
 }
 
 /* ------------------------------------------------------------------------------------------------ */
@@ -205,8 +229,8 @@ $color-font: #444444;
   }
 }
 
-@media only screen and (max-width: 600px){
-  .footer{
+@media only screen and (max-width: 600px) {
+  .footer {
     align-items: flex-start;
     flex-direction: column;
     justify-content: center;
