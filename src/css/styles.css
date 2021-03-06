@@ -203,6 +203,9 @@
   .header--info {
     display: none; }
 
+  .main__container--details {
+    width: 330px; }
+
   .footer {
     justify-content: center;
     flex-direction: column;
