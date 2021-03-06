@@ -178,6 +178,22 @@ $color-font: #444444;
   justify-content: space-around;
 }
 
+.status {
+  @extend %flex;
+}
+
+.card-status--name{
+  margin-left: 1px;
+}
+
+.alive {
+  color: #a2d0c1;
+}
+
+.dead {
+  color: #e97878;
+}
+
 .refresh_Button {
   width: 90%;
   display: flex;
