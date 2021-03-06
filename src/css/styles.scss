@@ -44,6 +44,10 @@ $color-font: #444444;
   width: 50px;
 }
 
+.fab{
+  visibility: hidden;
+}
+
 .header--info {
   padding-right: 50px;
   @extend %flex;
@@ -234,21 +238,86 @@ $color-font: #444444;
     color: white;
     font-size: 14px;
     cursor: pointer;
-    padding-left: 30px;
     text-decoration: none;
     padding-left: 50px;
   }
 
+  .footer-text_{
+    visibility: hidden;
+  }
+
   a:hover {
-    text-decoration: underline;
+    text-decoration: none;
     color: $color-Link;
   }
 }
 
-@media only screen and (max-width: 600px) {
+/* RESPONSIVE DESIGN */
+
+@media only screen and (max-width: 700px) {
   .footer {
     align-items: flex-start;
     flex-direction: column;
     justify-content: center;
   }
+}
+
+@media only screen and (max-width: 500px) {
+  
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.header--title {
+  padding-left: 0;
+}
+
+.header--info{ 
+  display: none;
+}
+
+.footer {
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-text_{
+  visibility: visible;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 50px;
+}
+
+.footer-text_, a, p{
+  color: white;
+  font-size: 14px;
+  visibility: visible;
+}
+
+#gitLink {
+  padding: 5px;
+}
+
+.footer_text__{
+  color: white;
+  font-size: 14px;
+  visibility: visible;
+}
+
+.fab{
+  visibility: visible;
+  color: white;
+  margin-left: 5px;
+  list-style: none;
+  text-align: center;
+}
+.footer-text{
+  display: none;
+}
+
 }
