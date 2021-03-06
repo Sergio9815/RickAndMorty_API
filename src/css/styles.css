@@ -206,19 +206,14 @@
   .footer {
     justify-content: center;
     flex-direction: column;
-<<<<<<< HEAD
     align-items: center;
     overflow: hidden; }
-=======
-    align-items: center; }
->>>>>>> 241445cd31a89f707e341d0d2c45ad9c8e018833
 
   .footer-text_ {
     visibility: visible;
     display: flex;
     justify-content: space-around;
     align-items: center;
-<<<<<<< HEAD
     padding-left: 0; }
 
   .footer-text_ a, p {
@@ -230,26 +225,10 @@
 
   .footer #platzi {
     padding: 0; }
-=======
-    padding-left: 50px; }
-
-  .footer-text_, a, p {
-    color: white;
-    font-size: 14px;
-    visibility: visible; }
->>>>>>> 241445cd31a89f707e341d0d2c45ad9c8e018833
 
   #gitLink {
     padding: 5px; }
 
-<<<<<<< HEAD
-=======
-  .footer_text__ {
-    color: white;
-    font-size: 14px;
-    visibility: visible; }
-
->>>>>>> 241445cd31a89f707e341d0d2c45ad9c8e018833
   .fab {
     visibility: visible;
     color: white;
