@@ -25,6 +25,7 @@ $color-font: #444444;
 /* Title bar */
 
 .header {
+  overflow: hidden;
   width: 100%;
   height: 70px;
   color: #ffffff;
@@ -42,6 +43,10 @@ $color-font: #444444;
 
 #git {
   width: 50px;
+}
+
+.fab{
+  visibility: hidden;
 }
 
 .header--info {
@@ -77,6 +82,7 @@ $color-font: #444444;
 /* Information section */
 
 .main__container {
+  overflow: hidden;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -123,6 +129,7 @@ $color-font: #444444;
 /* Character section */
 
 .character__container {
+  overflow: hidden;
   width: 100%;
   @extend %flex;
   background-color: rgb(240, 240, 240);
@@ -224,31 +231,98 @@ $color-font: #444444;
 
 .footer {
   @extend %flex;
-  justify-content: start;
+  justify-content: flex-start;
   height: 100px;
   width: 100%;
+  align-items: flex-start;
+  flex-direction: column;
   background-color: $color-topBar;
 
-  a,
-  .footer-text {
+  .footer-text, #platzi {
     color: white;
     font-size: 14px;
     cursor: pointer;
-    padding-left: 30px;
     text-decoration: none;
     padding-left: 50px;
   }
 
+  .footer-text_{
+    visibility: hidden;
+  }
+
   a:hover {
-    text-decoration: underline;
+    text-decoration: none;
     color: $color-Link;
   }
 }
 
-@media only screen and (max-width: 600px) {
+/* RESPONSIVE DESIGN */
+
+@media only screen and (max-width: 700px) {
   .footer {
     align-items: flex-start;
     flex-direction: column;
     justify-content: center;
   }
+}
+
+@media only screen and (max-width: 500px) {
+  
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.header--title {
+  padding-left: 0;
+}
+
+.header--info{ 
+  display: none;
+}
+
+.footer {
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.footer-text_{
+  visibility: visible;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 0;
+}
+
+.footer-text_  a, p{
+  color: white;
+  font-size: 14px;
+  visibility: visible;
+  padding-left: 0;
+  text-decoration: none;
+}
+
+.footer #platzi {
+  padding: 0;
+}
+
+#gitLink {
+  padding: 5px;
+}
+
+.fab{
+  visibility: visible;
+  color: white;
+  margin-left: 5px;
+  list-style: none;
+  text-align: center;
+}
+.footer-text{
+  display: none;
+}
+
 }
