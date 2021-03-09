@@ -228,45 +228,45 @@ $color-font: #444444;
 /* ------------------------------------------------------------------------------------------------ */
 
 /* Bottom bar */
-
 .footer {
-  @extend %flex;
-  justify-content: flex-start;
-  height: 100px;
+  display: flex;
+  overflow: hidden;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+  color: $color-topBar;
+  height: 40px;
   width: 100%;
-  align-items: flex-start;
-  flex-direction: column;
-  background-color: $color-topBar;
-
-  .footer-text, #platzi {
-    color: white;
-    font-size: 14px;
-    cursor: pointer;
-    text-decoration: none;
-    padding-left: 50px;
-  }
-
-  .footer-text_{
-    visibility: hidden;
-  }
-
-  a:hover {
-    text-decoration: none;
-    color: $color-Link;
-  }
+  background-color: #e0dede;
 }
+
+
+.footer-text{
+  visibility: hidden;
+}
+
+.footer-text_2 {
+  visibility: visible;
+  display: flex;
+  width: 90%;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 14px;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: bold;
+}
+
+.footer-text_2 p{
+  font-family: "Fira Sans", sans-serif;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
 
 /* RESPONSIVE DESIGN */
 
-@media only screen and (max-width: 700px) {
-  .footer {
-    align-items: flex-start;
-    flex-direction: column;
-    justify-content: center;
-  }
-}
-
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 650px) {
+  
   
 .header {
   display: flex;
@@ -287,46 +287,44 @@ $color-font: #444444;
   width: 330px;
 }
 
-.footer {
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  overflow: hidden;
+
+.footer-text_2 {
+  display: none;
 }
 
-.footer-text_{
+.footer-text{
   visibility: visible;
   display: flex;
-  justify-content: space-around;
+  width: 90%;
   align-items: center;
-  padding-left: 0;
-}
-
-.footer-text_  a, p{
-  color: white;
+  justify-content: center;
   font-size: 14px;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: bold;
+}
+
+.footer-text p{
+  font-family: "Fira Sans", sans-serif;
+  font-weight: bold;
+}
+
+.fab {
   visibility: visible;
-  padding-left: 0;
-  text-decoration: none;
-}
-
-.footer #platzi {
-  padding: 0;
-}
-
-#gitLink {
-  padding: 5px;
-}
-
-.fab{
-  visibility: visible;
-  color: white;
   margin-left: 5px;
+  margin-right: 5px;
   list-style: none;
   text-align: center;
+  color: $color-topBar;
 }
-.footer-text{
-  display: none;
+
+.footer-text a {
+  color: $color-topBar;
+
+  text-decoration: none;
+}
+.footer a:hover {
+  text-decoration: none;
+  color: $color-Link;
 }
 
 }
