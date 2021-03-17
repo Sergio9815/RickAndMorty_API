@@ -31,50 +31,35 @@ $color-font: #444444;
   color: #ffffff;
   background-color: $color-topBar;
   @extend %flex;
-  justify-content: space-between;
+  justify-content: center;
   @extend %shadow;
-  position: relative;
+  position: fixed;
   z-index: 1;
 }
 
-.header--title {
-  padding-left: 50px;
-}
-
-#git {
-  width: 30px;
-}
-
-.fab{
-  visibility: hidden;
-}
-
-.header--info {
-  padding-right: 50px;
+.header--container {
+  width: 85%;
   @extend %flex;
-  justify-content: center;
+  justify-content: space-between;
+}
 
-  ul {
-    list-style: none;
-    padding-left: 5px;
-    text-align: right;
-    display: flex;
-    justify-content: space-around;
-  }
+.social {
+  @extend %flex;
+  justify-content: space-around;
+  width: 180px;
 
-  li {
-    display: flex;
-    padding-left: 10px;
-  }
-
-  li a {
-    text-decoration: none;
+  a {
     color: white;
+    font-size: 20px;
   }
 
   a:hover {
-    color: $color-Link;
+    border-bottom: solid 2px white;
   }
+}
+
+#icons {
+  margin-left: 5px;
 }
 
 /* ------------------------------------------------------------------------------------------------ */
@@ -90,6 +75,7 @@ $color-font: #444444;
 
   img {
     width: 600px;
+    margin-top: 100px;
     object-fit: cover;
   }
 }
@@ -98,6 +84,7 @@ $color-font: #444444;
   @extend %flex;
   flex-direction: column;
   width: 400px;
+  margin-top: 100px;
 }
 
 .main-title {
@@ -189,7 +176,7 @@ $color-font: #444444;
   @extend %flex;
 }
 
-.card-status--name{
+.card-status--name {
   margin-left: 1px;
 }
 
@@ -228,103 +215,68 @@ $color-font: #444444;
 /* ------------------------------------------------------------------------------------------------ */
 
 /* Bottom bar */
+
 .footer {
-  display: flex;
-  overflow: hidden;
-  bottom: 0;
-  align-items: center;
+  @extend %flex;
   justify-content: center;
-  color: $color-topBar;
-  height: 40px;
+  height: 30px;
   width: 100%;
   background-color: #e0dede;
 }
 
+.social-footer {
+  @extend %flex;
+  justify-content: space-around;
+  width: 180px;
+  display: none;
 
-.footer-text{
-  visibility: hidden;
+  a {
+    color: $color-topBar;
+    font-size: 20px;
+  }
+
+  a:hover {
+    border-bottom: solid 2px $color-topBar;
+  }
 }
 
-.footer-text_2 {
-  visibility: visible;
-  display: flex;
-  width: 90%;
-  align-items: center;
-  justify-content: flex-start;
-  font-size: 14px;
-  font-family: "Fira Sans", sans-serif;
-  font-weight: bold;
+#icons {
+  margin-left: 5px;
 }
-
-.footer-text_2 p{
-  font-family: "Fira Sans", sans-serif;
-  font-weight: bold;
-  margin-left: 10px;
-}
-
 
 /* RESPONSIVE DESIGN */
 
 @media only screen and (max-width: 650px) {
-  
-  
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
 
-.header--title {
-  padding-left: 0;
-}
+  .header--container {
+    justify-content: center;
+  }
 
-.header--info{ 
-  display: none;
-}
+  .social {
+    display: none;
+  }
 
-.main__container--details {
-  width: 330px;
-}
+  .main__container--details {
+    width: 330px;
+  }
 
+  .main__container {
+    img {
+      margin-top: 0;
+    }
+  }
 
-.footer-text_2 {
-  display: none;
-}
+  .main__container--details {
+    margin-top: 0;
+  }
 
-.footer-text{
-  visibility: visible;
-  display: flex;
-  width: 90%;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  font-family: "Fira Sans", sans-serif;
-  font-weight: bold;
-}
-
-.footer-text p{
-  font-family: "Fira Sans", sans-serif;
-  font-weight: bold;
-}
-
-.fab {
-  visibility: visible;
-  margin-left: 5px;
-  margin-right: 5px;
-  list-style: none;
-  text-align: center;
-  color: $color-topBar;
-}
-
-.footer-text a {
-  color: $color-topBar;
-
-  text-decoration: none;
-}
-.footer a:hover {
-  text-decoration: none;
-  color: $color-Link;
-}
-
+  .social-footer {
+    display: flex;
+  }
 }
