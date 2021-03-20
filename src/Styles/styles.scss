@@ -23,6 +23,11 @@ $color-font: #444444;
 /* ------------------------------------------------------------------------------------------------ */
 
 /* Title bar */
+.top-bar {
+  @extend %flex;
+  justify-content: center;
+  flex-direction: column;
+}
 
 .header {
   overflow: hidden;
@@ -33,7 +38,8 @@ $color-font: #444444;
   @extend %flex;
   justify-content: center;
   @extend %shadow;
-  position: fixed;
+  position: sticky;
+  top: 0;
   z-index: 1;
 }
 
@@ -68,14 +74,14 @@ $color-font: #444444;
 
 .main__container {
   overflow: hidden;
-  width: 100%;
-  display: flex;
-  justify-content: center;
+  width: 90%;
+  @extend %flex;
+  justify-content: space-around;
   flex-wrap: wrap;
+  padding: 50px 0 50px 0;
 
   img {
     width: 600px;
-    margin-top: 100px;
     object-fit: cover;
   }
 }
@@ -84,7 +90,6 @@ $color-font: #444444;
   @extend %flex;
   flex-direction: column;
   width: 400px;
-  margin-top: 100px;
 }
 
 .main-title {
@@ -94,11 +99,12 @@ $color-font: #444444;
 }
 
 .main-desc {
-  font-size: 1rem;
+  font-size: .9rem;
   padding-top: 15px;
   color: $color-font;
   text-align: justify;
   line-height: 30px;
+  font-family: 'Roboto Mono', monospace;
 
   a {
     text-decoration: none;
@@ -120,7 +126,6 @@ $color-font: #444444;
   width: 100%;
   @extend %flex;
   background-color: rgb(240, 240, 240);
-  margin-top: 100px;
   padding-bottom: 50px;
   justify-content: center;
   flex-direction: column;
@@ -128,7 +133,7 @@ $color-font: #444444;
 }
 
 .character--title {
-  font-size: 1.5rem;
+  font-size: 2rem;
   padding-top: 50px;
   color: $color-title;
   margin-bottom: 10px;
@@ -267,6 +272,7 @@ $color-font: #444444;
   }
 
   .main__container {
+    padding: 15px 0 50px 0;
     img {
       margin-top: 0;
     }

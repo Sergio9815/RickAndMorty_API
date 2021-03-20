@@ -2,7 +2,7 @@
   -webkit-box-shadow: 0px 8px 10px -6px #0000005b;
   box-shadow: 0px 8px 10px -6px #0000005b; }
 
-.header, .header--container, .social, .main__container--details, .character__container, .character__grid, .status, .footer, .social-footer {
+.top-bar, .header, .header--container, .social, .main__container, .main__container--details, .character__container, .character__grid, .status, .footer, .social-footer {
   display: flex;
   align-items: center; }
 
@@ -13,6 +13,10 @@
 
 /* ------------------------------------------------------------------------------------------------ */
 /* Title bar */
+.top-bar {
+  justify-content: center;
+  flex-direction: column; }
+
 .header {
   overflow: hidden;
   width: 100%;
@@ -20,7 +24,8 @@
   color: #ffffff;
   background-color: #42464d;
   justify-content: center;
-  position: fixed;
+  position: sticky;
+  top: 0;
   z-index: 1; }
 
 .header--container {
@@ -43,19 +48,17 @@
 /* Information section */
 .main__container {
   overflow: hidden;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap; }
+  width: 90%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 50px 0 50px 0; }
   .main__container img {
     width: 600px;
-    margin-top: 100px;
     object-fit: cover; }
 
 .main__container--details {
   flex-direction: column;
-  width: 400px;
-  margin-top: 100px; }
+  width: 400px; }
 
 .main-title {
   font-size: 1.5rem;
@@ -63,11 +66,12 @@
   color: #64dd5b; }
 
 .main-desc {
-  font-size: 1rem;
+  font-size: .9rem;
   padding-top: 15px;
   color: #444444;
   text-align: justify;
-  line-height: 30px; }
+  line-height: 30px;
+  font-family: 'Roboto Mono', monospace; }
   .main-desc a {
     text-decoration: none;
     color: #43accc; }
@@ -81,14 +85,13 @@
   overflow: hidden;
   width: 100%;
   background-color: #f0f0f0;
-  margin-top: 100px;
   padding-bottom: 50px;
   justify-content: center;
   flex-direction: column;
   flex-wrap: wrap; }
 
 .character--title {
-  font-size: 1.5rem;
+  font-size: 2rem;
   padding-top: 50px;
   color: #64dd5b;
   margin-bottom: 10px; }
@@ -192,8 +195,10 @@
   .main__container--details {
     width: 330px; }
 
-  .main__container img {
-    margin-top: 0; }
+  .main__container {
+    padding: 15px 0 50px 0; }
+    .main__container img {
+      margin-top: 0; }
 
   .main__container--details {
     margin-top: 0; }

@@ -7,7 +7,8 @@
   <title>Rick and Morty</title>
   <link rel="stylesheet" href="Styles/styles.css">
   <link rel="icon" type="image/png type" href="https://i.imgur.com/xmguao0.png" />
-  <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@200;300&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
 </head>
@@ -16,32 +17,34 @@
 
   <!-- ---------- HEADER SECTION ---------- -->
 
-  <header class="header">
-    <div class="header--container">
-      <h1 tabindex="0" class="header--title">Rick and Morty API</h1>
-        <div class="social">
-          <p>Seamos amigos:</p>
-          <a id="icons" href="https://www.instagram.com/sagb_24/"><i class="fab fa-instagram"></i></a>
-          <a href="https://github.com/Sergio9815"><i class="fab fa-github"></i></a>
+  <header class="top-bar">
+    <nav class="header">
+      <div class="header--container">
+        <h1 tabindex="0" class="header--title">Rick and Morty API</h1>
+          <div class="social">
+            <p>Seamos amigos:</p>
+            <a id="icons" href="https://www.instagram.com/sagb_24/"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/Sergio9815"><i class="fab fa-github"></i></a>
+          </div>
         </div>
       </div>
-    </div>
+    </nav>
+    <section class="main__container">
+      <div class="main__container--details" style="text-align: justify;">
+        <h4 tabindex="0" class="main-title">JavaScript Asynchronism</h4>
+        <p tabindex="0" class="main-desc">On this site you can find information about your favorite scientist and his
+          unfortunate grandson. In addition to other characters <br> that appear in the series, as well as information
+          about them. The purpose of this project was to practice what was learned about asynchronism in JavaScript. For
+          this I made use of an asynchronous function to make requests to the API, the same that you can visit in:
+          <em><b><a href="https://rickandmortyapi.com/">Rick and Morty's API.</a></b></em>
+        </p>
+      </div>
+      <img tabindex="0" src="https://i.imgur.com/3dEr82o.jpg" alt="Rick and Morty">
+    </section>
   </header>
 
   <!-- ---------- TITLE SECTION ---------- -->
 
-  <section class="main__container">
-    <div class="main__container--details" style="text-align: justify;">
-      <h4 tabindex="0" class="main-title">JavaScript Asynchronism</h4>
-      <p tabindex="0" class="main-desc">On this site you can find information about your favorite scientist and his
-        unfortunate grandson. In addition to other characters <br> that appear in the series, as well as information
-        about them. The purpose of this project was to practice what was learned about asynchronism in JavaScript. For
-        this I made use of an asynchronous function to make requests to the API, the same that you can visit in:
-        <em><b><a href="https://rickandmortyapi.com/">Rick and Morty's API.</a></b></em>
-      </p>
-    </div>
-    <img tabindex="0" src="https://i.imgur.com/3dEr82o.jpg" alt="Rick and Morty">
-  </section>
 
   <!-- ---------- CHARACTERS SECTION ---------- -->
 
