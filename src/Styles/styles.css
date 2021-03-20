@@ -183,8 +183,7 @@
   .header {
     display: flex;
     align-items: center;
-    justify-content: center;
-    position: relative; }
+    justify-content: center; }
 
   .header--container {
     justify-content: center; }
