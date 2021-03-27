@@ -1,5 +1,5 @@
 /* ---------- API URL ---------- */
-const API = "https://rickandmortyapi.com/api/character?page=";
+const API = "https://rickandmortyapi.com/api/character/?page=";
 const characters = document.querySelectorAll('.character--card');
 
 /* ---------- ARRAYS FOR CHARACTER DATA ---------- */
