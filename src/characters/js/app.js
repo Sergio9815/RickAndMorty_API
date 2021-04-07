@@ -18,9 +18,12 @@ new Vue({
         options: ['Home', 'Characters', 'About'],
         title_ch: `Characters of the series`,
       },
-      ch_alive: true,
-      ch_dead: false,
+      ch_alive: false,
       charact: [
+        { name: '', image: '', status: '', species: '', origin: '', },
+        { name: '', image: '', status: '', species: '', origin: '', },
+        { name: '', image: '', status: '', species: '', origin: '', },
+        { name: '', image: '', status: '', species: '', origin: '', },
         { name: '', image: '', status: '', species: '', origin: '', },
         { name: '', image: '', status: '', species: '', origin: '', },
         { name: '', image: '', status: '', species: '', origin: '', },
@@ -35,29 +38,29 @@ new Vue({
 
   created: function () {
     let number = Math.round(this.getRandom(0, 34));
-      let url = API.replace("=", `=${number}`);
-    
-      /* ---------- MAKE REQUEST ---------- */
-      let fetch = new apiRequest();
-      fetch.request(url)
-        .then(characters => {
-            try {
-              for (let i = 0; i <= 7; i++) {
-                var character = characters.results[i];
-          
-                /* ---------- INSERT DATA INTO CARDS ---------- */
-                this.charact[i].name = `Name: ${character.name}`;
-                this.charact[i].image = character.image;
-                this.charact[i].status = `Status: ${character.status}`;
-                this.charact[i].species = `Species: ${character.species}`;
-                this.charact[i].origin = `Origin: ${character.origin.name}`;               
-                
-                // this.changeColorStatus(this.charact[i].status)
-              }
-            } catch (error) {
-              console.log(error);
-            }
-        })
+    let url = API.replace("=", `=${number}`);
+
+    /* ---------- MAKE REQUEST ---------- */
+    let fetch = new apiRequest();
+    fetch.request(url)
+      .then(characters => {
+        try {
+          for (let i = 0; i <= 11; i++) {
+            var character = characters.results[i];
+
+            /* ---------- INSERT DATA INTO CARDS ---------- */
+            this.charact[i].name = `Name: ${character.name}`;
+            this.charact[i].image = character.image;
+            this.charact[i].status = `Status: ${character.status}`;
+            this.charact[i].species = `Species: ${character.species}`;
+            this.charact[i].origin = `Origin: ${character.origin.name}`;
+
+            //this.changeColorStatus(this.charact[i].status.toUpperCase())
+          }
+        } catch (error) {
+          console.log(error);
+        }
+      })
   },
 
   components: {
@@ -68,19 +71,16 @@ new Vue({
 
   methods: {
     /* ---------- RANDOM VALUE ---------- */
-    getRandom (min, max) { 
+    getRandom(min, max) {
       return Math.random() * (max - min) + min;
     },
 
-    // changeColorStatus (stat) {
-    //   if (stat == 'Alive') {
+    // changeColorStatus(stat) {
+    //   if (stat  === 'ALIVE') {
     //     this.ch_alive = true;
-    //   } else if (stat == 'Dead') {
-    //     this.ch_dead = true;
-    //   }
-    //   else {
+    //   } 
+    //   else if (stat  === 'DEAD'){
     //     this.ch_alive = false;
-    //     this.ch_dead = false;
     //   }
     // },
 

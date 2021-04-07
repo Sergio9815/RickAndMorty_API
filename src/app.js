@@ -66,7 +66,8 @@ new Vue({
         status: '',
         species: '',
         origin: '',
-      }
+      },
+      // ch_alive: true,
     }
   },
 
@@ -91,6 +92,15 @@ new Vue({
       }
     },
 
+    // changeColorStatus(stat) {
+    //   if (stat === 'ALIVE') {
+    //     this.ch_alive = true;
+    //   }
+    //   else if (stat === 'DEAD') {
+    //     this.ch_alive = false;
+    //   }
+    // },
+
     showData(person) {
       /* ---------- MAKE REQUEST ---------- */
       let fetch = new apiRequest();
@@ -108,6 +118,7 @@ new Vue({
               this.data.status = `Status: ${character.status}`;
               this.data.species = `Species: ${character.species}`;
               this.data.origin = `Origin: ${character.origin.name}`;
+              //this.changeColorStatus(this.data.status.toUpperCase())
             }
             else {
               /* ---------- INSERT DATA INTO CARDS ---------- */

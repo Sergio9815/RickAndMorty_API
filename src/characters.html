@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./components/styles/styles.css">
   <link rel="stylesheet" href="./characters/styles/styles.css">
+  <link rel="icon" type="image/png type" href="https://i.imgur.com/dFU6Q4Y.png" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -34,7 +35,8 @@
           <div class="card--details">
             <h5 class="card-name"> {{ item.name }} </h5>
             <div class="status">
-              <!-- v-bind:class="{ alive: ch_alive, dead: ch_dead}"  -->
+              <!-- <h5 class="card-status">Status: </h5> -->
+              <!-- v-bind:class="{ 'dead': !ch_alive, 'alive': ch_alive }" -->
               <h5 
               class="card-status--name"> {{ item.status }} </h5>
             </div>
