@@ -1,0 +1,158 @@
+// /* ------------------------------------------------------------------------------------------------ */
+$color-topBar: #181e2d;
+$color-back: #262b41;
+$color-footer: #353c5a;
+
+%shadow {
+  -webkit-box-shadow: 0px 8px 10px -6px #0000005b;
+  box-shadow: 0px 8px 10px -6px #0000005b;
+}
+
+%flex {
+  display: flex;
+  align-items: center;
+}
+
+* {
+  margin: 0;
+  font-family: "Fira Sans", sans-serif;
+  outline: none;
+}
+
+
+
+/* Character section */
+
+.character__container {
+  overflow: hidden;
+  width: 100%;
+  @extend %flex;
+  background-color: $color-back;
+  padding-bottom: 50px;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.character--title {
+  font-size: 2rem;
+  padding-top: 50px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.character__grid {
+  width: 100%;
+  @extend %flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.character--card {
+  width: 260px;
+  height: 370px;
+  margin: 20px;
+  background-color: white;
+  border-radius: 6px;
+  padding: 15px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  @extend %shadow;
+
+  img {
+    object-fit: cover;
+    width: 240px;
+    height: 240px;
+    align-self: center;
+  }
+}
+
+.card--details {
+  height: 80px;
+  margin-top: 20px;
+  color: gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.status {
+  @extend %flex;
+}
+
+.card-status--name {
+  margin-left: 1px;
+}
+
+.alive {
+  color: #a2d0c1;
+}
+
+.dead {
+  color: #e97878;
+}
+
+.refresh_Button {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#btn-r {
+  background-color: #64dd5b;
+  color: white;
+  border-radius: 50px;
+  padding: 5px 32px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-color: transparent;
+  text-decoration: none;
+}
+
+#btn-r:hover {
+  background-color: lightcoral;
+}
+
+// /* RESPONSIVE DESIGN */
+
+// @media only screen and (max-width: 650px) {
+//   .header {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     // position: relative;
+//   }
+
+//   .header--container {
+//     justify-content: center;
+//   }
+
+//   .social {
+//     display: none;
+//   }
+
+//   .main__container--details {
+//     width: 330px;
+//   }
+
+//   .main__container {
+//     padding: 15px 0 50px 0;
+//     img {
+//       margin-top: 0;
+//     }
+//   }
+
+//   .main__container--details {
+//     margin-top: 0;
+//   }
+
+//   .social-footer {
+//     display: flex;
+//   }
+// }

@@ -1,0 +1,247 @@
+$color-topBar: #181e2d;
+$color-back: #262b41;
+$color-footer: #353c5a;
+$color-Link: #fbaccc;
+$color-title: hsl(116, 66%, 69%);
+$color-Hover: #a4ebf3;
+$color-font: #e7fff1;
+
+%shadow {
+  -webkit-box-shadow: 0px 8px 10px -6px #0000005b;
+  box-shadow: 0px 8px 10px -6px #0000005b;
+}
+
+%flex {
+  display: flex;
+  align-items: center;
+}
+
+* {
+  margin: 0;
+  font-family: "Fira Sans", sans-serif;
+  outline: none;
+}
+
+/* ------------------------------------------------------------------------------------------------ */
+
+/* Title bar */
+.top-bar {
+  @extend %flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.header {
+  overflow: hidden;
+  width: 100%;
+  height: 70px;
+  color:  white;
+  background-color: $color-topBar;
+  @extend %flex;
+  justify-content: center;
+  @extend %shadow;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.header--container {
+  width: 80%;
+  @extend %flex;
+  justify-content: space-between;
+  h1 {
+    margin-left: 40px;
+  }
+}
+
+.header--container {
+  ul {
+    list-style: none;
+    margin-left: 100px;
+    align-self: center;
+    li {
+      float: left;
+      padding-left: 20px;
+      a {
+        color: white;
+        text-decoration: none;
+        letter-spacing: 2px;
+        font-size: 15px;
+      }
+      a:hover {
+        border-bottom: 2px solid white;
+      }
+    }
+  }
+}
+
+/* ------------------------------------------------------------------------------------------------ */
+
+/* Information section */
+
+.container {
+  background-color: $color-back;
+  overflow: hidden;
+  width: 100%;
+  flex-direction: column;
+  @extend %flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.container__section {
+  @extend %flex;
+  width: 75%;
+  padding: 35px 0 35px 0;
+  justify-content: flex-end;
+  img {
+    width: 500px;
+    object-fit: cover;
+  }
+}
+
+.container--details {
+  @extend %flex;
+  flex-direction: column;
+  width: 350px;
+}
+
+.main-title {
+  font-size: 1.5rem;
+  padding-top: 50px;
+  color: $color-title;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+}
+
+.main-desc {
+  font-size: 0.9rem;
+  padding-top: 15px;
+  color: $color-font;
+  text-align: justify;
+  line-height: 30px;
+  font-family: 'Lato', sans-serif;
+
+  a {
+    text-decoration: none;
+    color: $color-Link;
+  }
+
+  a:hover {
+    text-decoration: underline;
+    color: $color-Hover;
+  }
+}
+
+
+/* ------------------------------------------------------------------------------------------------ */
+
+/* Search section */
+
+.container__search {
+  @extend %flex;
+  flex-direction: column;
+  justify-content: center;
+  gap:30px;
+  width: 80%;
+  height: 100px;
+  margin-bottom: 50px;
+
+  h3 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    font-size: 25px;
+    color: white;
+  }
+}
+
+::placeholder {
+  color: white;
+  font-size: 1.0em;
+}
+
+.container--search {
+  width: 500px;
+  border-radius: 10px;
+  border-left: solid 2px lightcoral;
+}
+
+.search__bar {
+  @extend %flex;
+  justify-content: space-between;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+.bar--input {
+  width: 400px;
+  height: 40px;
+  margin-left: 15px;
+  border-radius: 10px;
+  color: white;
+  border: none;
+  background-color: unset;
+}
+
+.bar--button {
+  width: 50px;
+  height: 45px;
+  border-radius: 6px;
+  color: white;
+  background-color: coral;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+/* ------------------------------------------------------------------------------------------------ */
+
+/* --- --- -- ABOUT-ME -- --- --- */
+
+.section__container {
+  overflow: hidden;
+  @extend %flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  background-color: $color-footer;
+}
+
+#about-me {
+  height: 80px;
+  color: white;
+  font-size: 13px;
+}
+
+.container--footer {
+  width: 80%;
+  align-self: center;
+  height: 50px;
+  border-top: dashed 1.5px white;
+  border-bottom: dashed 1.5px white;
+  @extend %flex;
+  justify-content: space-between;
+}
+
+#heart {
+  color: lightcoral;
+}
+
+.social {
+  @extend %flex;
+  justify-content: space-around;
+  width: 180px;
+}
+
+.social a {
+  color: white;
+  font-size: 20px;
+}
+
+.social a:hover {
+  border-bottom: solid 2px white;
+}
+
+#icons {
+  margin-left: 5px;
+}
