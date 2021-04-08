@@ -60,8 +60,8 @@ new Vue({
           }
         } catch (error) {
           console.log(error);
-          this.charact[11].name = `  ツ 𝚆𝚎 𝚊𝚛𝚎 𝚜𝚘𝚛𝚛𝚢, 𝙲𝚑𝚊𝚛𝚊𝚌𝚝𝚎𝚛 𝚗𝚘𝚝 𝚏𝚘𝚞𝚗𝚍!`
-          this.charact[11].image = `https://i.imgur.com/dSYutnI.jpg`;
+          this.charact[11].name = fetch.error.name;
+          this.charact[11].image = fetch.error.image;
         }
       })
   },

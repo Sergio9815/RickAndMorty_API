@@ -132,8 +132,8 @@ new Vue({
 
           } catch (error) {
             console.log(error);
-            this.data.name = `  ツ 𝚆𝚎 𝚊𝚛𝚎 𝚜𝚘𝚛𝚛𝚢, 𝙲𝚑𝚊𝚛𝚊𝚌𝚝𝚎𝚛 𝚗𝚘𝚝 𝚏𝚘𝚞𝚗𝚍!`
-            this.data.image = `https://i.imgur.com/Z5pM1PJ.jpg`;
+            this.data.name = fetch.error.name;
+            this.data.image = fetch.error.image;
           }
         })
       this.toggleFound_character();
