@@ -17,6 +17,7 @@ new Vue({
         title: `Rick and Morty API`,
         options: ['Home', 'Characters', 'About'],
         title_ch: `Characters of the series`,
+        isActive: 1,
       },
       ch_alive: false,
       charact: [
@@ -59,6 +60,8 @@ new Vue({
           }
         } catch (error) {
           console.log(error);
+          this.charact[11].name = `  ツ 𝚆𝚎 𝚊𝚛𝚎 𝚜𝚘𝚛𝚛𝚢, 𝙲𝚑𝚊𝚛𝚊𝚌𝚝𝚎𝚛 𝚗𝚘𝚝 𝚏𝚘𝚞𝚗𝚍!`
+          this.charact[11].image = `https://i.imgur.com/dSYutnI.jpg`;
         }
       })
   },

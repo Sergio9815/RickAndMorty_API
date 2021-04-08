@@ -43,7 +43,7 @@ Vue.component('main-data', {
               <h3>Search Characters</h3>
               <div class="container--search">
                 <div class="search__bar">
-                  <input v-model="value" class="bar--input" type="text" placeholder="Type the name or id of the character (1 to 671)...">
+                  <input v-on:keyup.enter="search" v-model="value" class="bar--input" type="text" placeholder="Type the name or id of the character (1 to 671) . . .">
                   <button class="bar--button" v-on:click="search"><i class="fas fa-search"></i></button>
                 </div>
               </div>
@@ -66,6 +66,7 @@ new Vue({
         status: '',
         species: '',
         origin: '',
+        isActive: 0,
       },
       // ch_alive: true,
     }
@@ -131,6 +132,8 @@ new Vue({
 
           } catch (error) {
             console.log(error);
+            this.data.name = `  ツ 𝚆𝚎 𝚊𝚛𝚎 𝚜𝚘𝚛𝚛𝚢, 𝙲𝚑𝚊𝚛𝚊𝚌𝚝𝚎𝚛 𝚗𝚘𝚝 𝚏𝚘𝚞𝚗𝚍!`
+            this.data.image = `https://i.imgur.com/Z5pM1PJ.jpg`;
           }
         })
       this.toggleFound_character();

@@ -49,6 +49,9 @@
     .header--container ul li a:hover {
       border-bottom: 2px solid white; }
 
+.menuActive {
+  border-bottom: 1px solid rgba(121, 219, 255, 0.5); }
+
 /* ------------------------------------------------------------------------------------------------ */
 /* Information section */
 .container {
@@ -74,7 +77,7 @@
 .main-title {
   font-size: 1.5rem;
   padding-top: 50px;
-  color: #83e47c;
+  color: #b2fa9c;
   font-family: 'Lato', sans-serif;
   font-weight: 500; }
 
@@ -114,7 +117,7 @@
 .container--search {
   width: 500px;
   border-radius: 10px;
-  border-left: solid 2px lightcoral; }
+  border-left: solid 2px #ff8882; }
 
 .search__bar {
   justify-content: space-between;
@@ -135,7 +138,7 @@
   height: 45px;
   border-radius: 6px;
   color: white;
-  background-color: coral;
+  background-color: #ff8882;
   cursor: pointer;
   outline: none;
   border: none; }
