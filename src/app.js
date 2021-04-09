@@ -36,7 +36,7 @@ Vue.component('main-data', {
                   <em><b><a href="https://rickandmortyapi.com/">Rick and Morty's API.</a></b></em>
                 </p>
               </div>
-              <img tabindex="0" src="https://i.imgur.com/QPsV6Wi.png" alt="Rick and Morty">
+              <img tabindex="0" src="./assets/images/1_logo-main.png" alt="Rick and Morty">
             </section>
 
             <section class="container__search">
