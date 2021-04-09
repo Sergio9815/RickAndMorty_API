@@ -1,5 +1,5 @@
 export default { 
-  name: 'found_character', 
+  name: 'foundCharacter', 
   props: ['elements'],
   data() {
     return {
