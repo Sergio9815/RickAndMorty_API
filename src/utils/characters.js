@@ -19,6 +19,7 @@ new Vue({
         options: ['Home', 'Characters', 'About me'],
         title_ch: `Characters of the series`,
         isActive: 1,
+        showFloat: false,
       },
       ch_alive: false,
       charact: [
@@ -75,6 +76,10 @@ new Vue({
   },
 
   methods: {
+    toggleMenu (){
+      this.data.showFloat = !this.data.showFloat;
+    },
+  
     /* ---------- RANDOM VALUE ---------- */
     getRandom(min, max) {
       return Math.random() * (max - min) + min;

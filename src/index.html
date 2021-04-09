@@ -22,9 +22,9 @@
   <div id="app">
     <!-- ---------- HEADER SECTION ---------- -->
 
-    <header class="top-bar" id="home">
+    <div class="top-bar" id="home">
 
-      <header-menu v-bind:elements="data"></header-menu>
+      <header-menu v-on:show-menu="toggleMenu" v-bind:elements="data"></header-menu>
 
       <main-data v-on:search-character="showData" ></main-data>
 
@@ -32,7 +32,7 @@
 
       </found_character>
 
-    </header>
+    </div>
 
     <!-- CONTACT SECTION -->
     <about></about>

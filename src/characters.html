@@ -23,7 +23,7 @@
 
     <div id="app">
 
-      <header-menu v-bind:elements="data"></header-menu>
+      <header-menu v-on:show-menu="toggleMenu" v-bind:elements="data"></header-menu>
 
       <main class="character__container" Access-Control-Allow-Origin: https://rickandmortyapi.com />
         <h3 tabindex="0" class="character--title"> {{data.title_ch}} </h3>

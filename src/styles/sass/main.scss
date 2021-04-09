@@ -20,9 +20,9 @@
 
 .container__section {
   @extend %flex;
-  width: 75%;
+  width: 100%;
   padding: 35px 0 35px 0;
-  justify-content: flex-end;
+  justify-content: center;
   img {
     width: 500px;
     object-fit: cover;
@@ -33,13 +33,14 @@
   @extend %flex;
   flex-direction: column;
   width: 350px;
+  margin-left: 100px;
 }
 
 .main-title {
   font-size: 1.5rem;
   padding-top: 50px;
   color: $color-title;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 500;
 }
 
@@ -48,8 +49,9 @@
   padding-top: 15px;
   color: $color-font;
   text-align: justify;
+  width: 350px;
   line-height: 30px;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 
   a {
     text-decoration: none;
@@ -62,7 +64,6 @@
   }
 }
 
-
 /* ------------------------------------------------------------------------------------------------ */
 
 /* --- --- -- SEARCH SECTION -- --- --- */
@@ -71,13 +72,13 @@
   @extend %flex;
   flex-direction: column;
   justify-content: center;
-  gap:30px;
+  gap: 30px;
   width: 80%;
   height: 100px;
   margin-bottom: 50px;
 
   h3 {
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     font-weight: 900;
     font-size: 25px;
     color: $color-white;
@@ -86,7 +87,7 @@
 
 ::placeholder {
   color: $color-white;
-  font-size: 1.0em;
+  font-size: 1em;
 }
 
 .container--search {
@@ -109,6 +110,7 @@
   border-radius: 10px;
   color: $color-white;
   border: none;
+  caret-color: $color-title;
   background-color: unset;
 }
 
@@ -122,7 +124,6 @@
   outline: none;
   border: none;
 }
-
 
 /* ------------------------------------------------------------------------------------------------ */
 
@@ -168,6 +169,38 @@
 
 #btn-r:hover {
   background-color: $color-orange;
+}
+
+/* ------------------------------------------------------------------------------------------------ */
+
+/* --- --- -- RESPONSIVE DESIGN -- --- --- */
+
+@media screen and (max-width: 890px) {
+  .container__section {
+    flex-direction: column;
+  }
+
+  .main-desc {
+    width: 500px;
+  }
+
+  .container--details {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .main-desc {
+    width: 90%;
+  }
+
+  .search__bar {
+    width: 100%;
+}
+  .container--search {
+    width: 90%;
+  }
 }
 
 /* ------------------------------------------------------------------------------------------------ */

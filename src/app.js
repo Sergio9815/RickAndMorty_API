@@ -67,6 +67,7 @@ new Vue({
         species: '',
         origin: '',
         isActive: 0,
+        showFloat: false,
       },
       // ch_alive: true,
     }
@@ -79,6 +80,10 @@ new Vue({
   },
 
   methods: {
+    toggleMenu (){
+      this.data.showFloat = !this.data.showFloat;
+    },
+
     toggleFound_character() {
       this.data.showFound_character = !this.data.showFound_character;
     },
