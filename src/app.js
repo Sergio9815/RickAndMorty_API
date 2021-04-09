@@ -59,7 +59,7 @@ new Vue({
     return {
       data: {
         title: `Rick and Morty API`,
-        options: ['Home', 'Characters', 'About'],
+        options: ['Home', 'Characters', 'About me'],
         showFound_character: false,
         name: '',
         image: '',

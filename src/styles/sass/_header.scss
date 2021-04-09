@@ -1,0 +1,59 @@
+/* ------------------------------------------------------------------------------------------------ */
+
+/* --- --- -- HEADER -- --- --- */
+
+.top-bar {
+  @extend %flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.header {
+  overflow: hidden;
+  width: 100%;
+  height: 70px;
+  color:  $color-white;
+  background-color: $color-topBar;
+  @extend %flex;
+  justify-content: center;
+  @extend %shadow;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.header--container {
+  width: 80%;
+  @extend %flex;
+  justify-content: space-between;
+  h1 {
+    margin-left: 40px;
+  }
+}
+
+.header--container {
+  ul {
+    list-style: none;
+    margin-left: 100px;
+    align-self: center;
+    li {
+      float: left;
+      padding-left: 20px;
+      a {
+        color: $color-white;
+        text-decoration: none;
+        letter-spacing: 2px;
+        font-size: 15px;
+      }
+      a:hover {
+        border-bottom: 2px solid $color-white;
+      }
+    }
+  }
+}
+
+.menuActive{
+  border-bottom: 1px solid $color-Hover-2;
+}
+
+/* ------------------------------------------------------------------------------------------------ */

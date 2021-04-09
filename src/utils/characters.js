@@ -1,9 +1,10 @@
-import apiRequest from '../../utils/fetch.js'
+import apiRequest from './fetch.js'
 
 /* ---------- IMPORT COMPONENTS ---------- */
-import headerMenu from '../../components/headerMenu.js'
-import found_character from '../../components/found_character.js'
-import about from '../../components/about.js'
+import headerMenu from '../components/headerMenu.js'
+import found_character from '../components/found_character.js'
+import about from '../components/about.js'
+import cards from '../components/cards.js'
 
 /* ---------- API URL ---------- */
 const API = "https://rickandmortyapi.com/api/character/?page=";
@@ -15,7 +16,7 @@ new Vue({
     return {
       data: {
         title: `Rick and Morty API`,
-        options: ['Home', 'Characters', 'About'],
+        options: ['Home', 'Characters', 'About me'],
         title_ch: `Characters of the series`,
         isActive: 1,
       },
@@ -70,6 +71,7 @@ new Vue({
     'headerMenu': headerMenu,
     'found_character': found_character,
     'about': about,
+    'cards': cards,
   },
 
   methods: {
