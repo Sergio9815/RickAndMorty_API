@@ -1,0 +1,131 @@
+/* ------------------------------------------------------------------------------------------------ */
+
+/* --- --- -- HEADER -- --- --- */
+
+.top-bar {
+  @extend %flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.btn--showMenu {
+  border: none;
+  background-color: transparent;
+  font-size: 25px;
+  color: white;
+  cursor: pointer;
+  // display: none;
+  // outline: none;
+}
+
+.header {
+  overflow: hidden;
+  width: 100%;
+  height: 70px;
+  color: $color-white;
+  background-color: $color-topBar;
+  @extend %flex;
+  justify-content: center;
+  @extend %shadow;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.header--container {
+  width: 80%;
+  @extend %flex;
+  justify-content: space-between;
+  h1 {
+    margin-left: 40px;
+  }
+}
+
+.header--container {
+  ul {
+    list-style: none;
+    margin-left: 100px;
+    align-self: center;
+    li {
+      float: left;
+      padding-left: 20px;
+      a {
+        color: $color-white;
+        text-decoration: none;
+        letter-spacing: 2px;
+        font-size: 15px;
+      }
+      a:hover {
+        border-bottom: 2px solid $color-white;
+      }
+    }
+  }
+}
+
+.menuActive {
+  border-bottom: 1px solid $color-Hover-2;
+}
+
+/* ------------------------------------------------------------------------------------------------ */
+
+/* --- --- -- FLOAT MENU -- --- --- */
+
+.btn--showMenu {
+  display: none;
+}
+
+.header__float-menu {
+  background-color: $color-float;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  right: 1px;
+  top: 70px;
+}
+
+.float--container {
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  li {
+    a {
+      color: $color-white;
+      text-decoration: none;
+      letter-spacing: 2px;
+      font-size: 15px;
+    }
+    a:hover {
+      border-bottom: 2px solid $color-white;
+    }
+  }
+}
+
+/* ------------------------------------------------------------------------------------------------ */
+
+/* --- --- -- RESPONSIVE DESIGN -- --- --- */
+
+@media screen and (max-width: 840px) {
+  .header {
+    overflow: unset;
+  }
+
+  .header__ul-menu {
+    display: none;
+  }
+
+  .btn--showMenu {
+    display: block;
+  }
+
+  .header--container ul {
+    margin-left: 0;
+  }
+}

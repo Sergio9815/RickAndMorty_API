@@ -5,9 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rick and Morty</title>
-  <link rel="stylesheet" href="Styles/styles.css">
-  <link rel="icon" type="image/png type" href="https://i.imgur.com/xmguao0.png" />
+  <link rel="stylesheet" href="./styles/css/main.css">
+  <link rel="stylesheet" href="./styles/css/search-card/card.css">
+  <link rel="icon" type="image/png type" href="./assets/images/3_logo-morty.png" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
@@ -15,163 +19,31 @@
 
 <body>
 
-  <!-- ---------- HEADER SECTION ---------- -->
+  <div id="app">
+    <!-- ---------- HEADER SECTION ---------- -->
 
-  <header class="top-bar">
-    <nav class="header">
-      <div class="header--container">
-        <h1 tabindex="0" class="header--title">Rick and Morty API</h1>
-          <div class="social">
-            <p>Seamos amigos:</p>
-            <a id="icons" href="https://www.instagram.com/sagb_24/"><i class="fab fa-instagram"></i></a>
-            <a href="https://github.com/Sergio9815"><i class="fab fa-github"></i></a>
-          </div>
-        </div>
-      </div>
-    </nav>
-    <section class="main__container">
-      <div class="main__container--details" style="text-align: justify;">
-        <h4 tabindex="0" class="main-title">JavaScript Asynchronism</h4>
-        <p tabindex="0" class="main-desc">On this site you can find information about your favorite scientist and his
-          unfortunate grandson. In addition to other characters <br> that appear in the series, as well as information
-          about them. The purpose of this project was to practice what was learned about asynchronism in JavaScript. For
-          this I made use of an asynchronous function to make requests to the API, the same that you can visit in:
-          <em><b><a href="https://rickandmortyapi.com/">Rick and Morty's API.</a></b></em>
-        </p>
-      </div>
-      <img tabindex="0" src="https://i.imgur.com/3dEr82o.jpg" alt="Rick and Morty">
-    </section>
-  </header>
+    <div class="top-bar" id="home">
 
-  <!-- ---------- CHARACTERS SECTION ---------- -->
+      <header-menu v-on:show-menu="toggleMenu" v-bind:elements="data"></header-menu>
 
-  <main class="character__container" Access-Control-Allow-Origin: https://rickandmortyapi.com/>
-    <h3 tabindex="0" class="character--title">Characters</h3>
-    <section class="character__grid" id="character--container">
+      <main-data v-on:search-character="showData" ></main-data>
 
-      <div class="character--card">
-        <img class="card--img" src="" alt="">
-        <div class="card--details">
-          <h5 class="card-name">Name</h5>
-          <div class="status">
-            <h5 class="card-status">Status</h5>
-            <h5 class="card-status--name">: </h5>
-          </div>
-          <h5 class="card-species">Species</h5>
-          <h5 class="card-origin">Origin</h5>
-        </div>
-      </div>
+      <found_character v-show="data.showFound_character" v-on:close-found_character="toggleFound_character" v-bind:elements="data">
 
-      <div class="character--card">
-        <img class="card--img" src="" alt="">
-        <div class="card--details">
-          <h5 class="card-name">Name</h5>
-          <div class="status">
-            <h5 class="card-status">Status</h5>
-            <h5 class="card-status--name">: </h5>
-          </div>
-          <h5 class="card-species">Species</h5>
-          <h5 class="card-origin">Origin</h5>
-        </div>
-      </div>
+      </found_character>
 
-      <div class="character--card">
-        <img class="card--img" src="" alt="">
-        <div class="card--details">
-          <h5 class="card-name">Name</h5>
-          <div class="status">
-            <h5 class="card-status">Status</h5>
-            <h5 class="card-status--name">: </h5>
-          </div>
-          <h5 class="card-species">Species</h5>
-          <h5 class="card-origin">Origin</h5>
-        </div>
-      </div>
+    </div>
 
-      <div class="character--card">
-        <img class="card--img" src="" alt="">
-        <div class="card--details">
-          <h5 class="card-name">Name</h5>
-          <div class="status">
-            <h5 class="card-status">Status</h5>
-            <h5 class="card-status--name">: </h5>
-          </div>
-          <h5 class="card-species">Species</h5>
-          <h5 class="card-origin">Origin</h5>
-        </div>
-      </div>
+    <!-- CONTACT SECTION -->
+    <about></about>
 
-      <div class="character--card">
-        <img class="card--img" src="" alt="">
-        <div class="card--details">
-          <h5 class="card-name">Name</h5>
-          <div class="status">
-            <h5 class="card-status">Status</h5>
-            <h5 class="card-status--name">: </h5>
-          </div>
-          <h5 class="card-species">Species</h5>
-          <h5 class="card-origin">Origin</h5>
-        </div>
-      </div>
+  </div>
 
-      <div class="character--card">
-        <img class="card--img" src="" alt="">
-        <div class="card--details">
-          <h5 class="card-name">Name</h5>
-          <div class="status">
-            <h5 class="card-status">Status</h5>
-            <h5 class="card-status--name">: </h5>
-          </div>
-          <h5 class="card-species">Species</h5>
-          <h5 class="card-origin">Origin</h5>
-        </div>
-      </div>
-
-      <div class="character--card">
-        <img class="card--img" src="" alt="">
-        <div class="card--details">
-          <h5 class="card-name">Name</h5>
-          <div class="status">
-            <h5 class="card-status">Status</h5>
-            <h5 class="card-status--name">: </h5>
-          </div>
-          <h5 class="card-species">Species</h5>
-          <h5 class="card-origin">Origin</h5>
-        </div>
-      </div>
-
-      <div class="character--card">
-        <img class="card--img" src="" alt="">
-        <div class="card--details">
-          <h5 class="card-name">Name</h5>
-          <div class="status">
-            <h5 class="card-status">Status</h5>
-            <h5 class="card-status--name">: </h5>
-          </div>
-          <h5 class="card-species">Species</h5>
-          <h5 class="card-origin">Origin</h5>
-        </div>
-      </div>
-
-    </section>
-
-    <section class="refresh_Button">
-      <button id="btn-r" onclick="location.reload()"><i class="fas fa-redo"></i> REFRESH</button>
-    </section>
-  </main>
-  
-  <!-- ---------- INFORMATION SECTION ---------- -->
-
-  <footer class="footer">
-    <section class="social-footer">
-      <p>Seamos amigos:</p>
-      <a id="icons" href="https://www.instagram.com/sagb_24/"><i class="fab fa-instagram"></i></a>
-      <a href="https://github.com/Sergio9815"><i class="fab fa-github"></i></a>
-    </section>
-  </footer>
-
+  <!-- REFERENCIA A VUE JS USANDO CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+  <script type="module" src="./app.js"></script>
   <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-  <script src="./Js/app.js"></script>
 
 </body>
+
 </html>

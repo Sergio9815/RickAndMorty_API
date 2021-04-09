@@ -1,0 +1,59 @@
+/* ------------------------------------------------------------------------------------------------ */
+
+/* --- --- -- CARDS -- --- --- */
+
+.character__grid {
+  width: 100%;
+  @extend %flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.character--card {
+  width: 260px;
+  height: 370px;
+  margin: 20px;
+  background-color: white;
+  border-radius: 6px;
+  padding: 15px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  @extend %shadow;
+
+  img {
+    object-fit: cover;
+    width: 240px;
+    height: 240px;
+    align-self: center;
+  }
+}
+
+.card--details {
+  height: 80px;
+  margin-top: 20px;
+  color: gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.status {
+  @extend %flex;
+}
+
+.card-status--name {
+  margin-left: 1px;
+}
+
+.alive {
+  color: #a2d0c1;
+}
+
+.dead {
+  color: #e97878;
+}
+
+/* ------------------------------------------------------------------------------------------------ */

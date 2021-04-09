@@ -1,0 +1,206 @@
+@import "colors";
+@import "global";
+@import "header";
+@import "footer";
+@import "cards";
+
+/* ------------------------------------------------------------------------------------------------ */
+
+/* --- --- -- MAIN SECTION -- --- --- */
+
+.container {
+  background-color: $color-back;
+  overflow: hidden;
+  width: 100%;
+  flex-direction: column;
+  @extend %flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.container__section {
+  @extend %flex;
+  width: 100%;
+  padding: 35px 0 35px 0;
+  justify-content: center;
+  img {
+    width: 500px;
+    object-fit: cover;
+  }
+}
+
+.container--details {
+  @extend %flex;
+  flex-direction: column;
+  width: 350px;
+  margin-left: 100px;
+}
+
+.main-title {
+  font-size: 1.5rem;
+  padding-top: 50px;
+  color: $color-title;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+}
+
+.main-desc {
+  font-size: 0.9rem;
+  padding-top: 15px;
+  color: $color-font;
+  text-align: justify;
+  width: 350px;
+  line-height: 30px;
+  font-family: "Lato", sans-serif;
+
+  a {
+    text-decoration: none;
+    color: $color-Link;
+  }
+
+  a:hover {
+    text-decoration: underline;
+    color: $color-Hover;
+  }
+}
+
+/* ------------------------------------------------------------------------------------------------ */
+
+/* --- --- -- SEARCH SECTION -- --- --- */
+
+.container__search {
+  @extend %flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  width: 80%;
+  height: 100px;
+  margin-bottom: 50px;
+
+  h3 {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-size: 25px;
+    color: $color-white;
+  }
+}
+
+::placeholder {
+  color: $color-white;
+  font-size: 1em;
+}
+
+.container--search {
+  width: 500px;
+  border-radius: 10px;
+  border-left: solid 2px $color-orange;
+}
+
+.search__bar {
+  @extend %flex;
+  justify-content: space-between;
+  border: 2px solid $color-white;
+  border-radius: 10px;
+}
+
+.bar--input {
+  width: 400px;
+  height: 40px;
+  margin-left: 15px;
+  border-radius: 10px;
+  color: $color-white;
+  border: none;
+  caret-color: $color-title;
+  background-color: unset;
+}
+
+.bar--button {
+  width: 50px;
+  height: 45px;
+  border-radius: 6px;
+  color: $color-white;
+  background-color: $color-orange;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+/* ------------------------------------------------------------------------------------------------ */
+
+/* --- --- -- CHARACTERS SECTION -- --- --- */
+
+.character__container {
+  overflow: hidden;
+  width: 100%;
+  @extend %flex;
+  background-color: $color-back;
+  padding-bottom: 50px;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.character--title {
+  font-size: 2rem;
+  padding-top: 50px;
+  color: $color-white;
+  margin-bottom: 10px;
+}
+
+.refresh_Button {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#btn-r {
+  background-color: $color-title;
+  color: $color-white;
+  border-radius: 50px;
+  padding: 5px 32px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-color: transparent;
+  text-decoration: none;
+}
+
+#btn-r:hover {
+  background-color: $color-orange;
+}
+
+/* ------------------------------------------------------------------------------------------------ */
+
+/* --- --- -- RESPONSIVE DESIGN -- --- --- */
+
+@media screen and (max-width: 890px) {
+  .container__section {
+    flex-direction: column;
+  }
+
+  .main-desc {
+    width: 500px;
+  }
+
+  .container--details {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .main-desc {
+    width: 90%;
+  }
+
+  .search__bar {
+    width: 100%;
+}
+  .container--search {
+    width: 90%;
+  }
+}
+
+/* ------------------------------------------------------------------------------------------------ */

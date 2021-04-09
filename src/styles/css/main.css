@@ -1,0 +1,358 @@
+/* ------------------------------------------------------------------------------------------------ */
+/* --- --- -- COLORS -- --- --- */
+/* ------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------ */
+/* --- --- -- GLOBAL CONFIG -- --- --- */
+.header, .character--card {
+  -webkit-box-shadow: 0px 8px 10px -6px #0000005b;
+  box-shadow: 0px 8px 10px -6px #0000005b; }
+
+.top-bar, .header, .header--container, .section__container, .container--footer, .social, .character__grid, .status, .container, .container__section, .container--details, .container__search, .search__bar, .character__container {
+  display: flex;
+  align-items: center; }
+
+* {
+  margin: 0;
+  font-family: "Fira Sans", sans-serif;
+  outline: none; }
+
+/* ------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------ */
+/* --- --- -- HEADER -- --- --- */
+.top-bar {
+  justify-content: center;
+  flex-direction: column; }
+
+.btn--showMenu {
+  border: none;
+  background-color: transparent;
+  font-size: 25px;
+  color: white;
+  cursor: pointer; }
+
+.header {
+  overflow: hidden;
+  width: 100%;
+  height: 70px;
+  color: white;
+  background-color: #181e2d;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 1; }
+
+.header--container {
+  width: 80%;
+  justify-content: space-between; }
+  .header--container h1 {
+    margin-left: 40px; }
+
+.header--container ul {
+  list-style: none;
+  margin-left: 100px;
+  align-self: center; }
+  .header--container ul li {
+    float: left;
+    padding-left: 20px; }
+    .header--container ul li a {
+      color: white;
+      text-decoration: none;
+      letter-spacing: 2px;
+      font-size: 15px; }
+    .header--container ul li a:hover {
+      border-bottom: 2px solid white; }
+
+.menuActive {
+  border-bottom: 1px solid rgba(121, 219, 255, 0.5); }
+
+/* ------------------------------------------------------------------------------------------------ */
+/* --- --- -- FLOAT MENU -- --- --- */
+.btn--showMenu {
+  display: none; }
+
+.header__float-menu {
+  background-color: #181e2df1;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  right: 1px;
+  top: 70px; }
+
+.float--container {
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around; }
+  .float--container li a {
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 15px; }
+  .float--container li a:hover {
+    border-bottom: 2px solid white; }
+
+/* ------------------------------------------------------------------------------------------------ */
+/* --- --- -- RESPONSIVE DESIGN -- --- --- */
+@media screen and (max-width: 840px) {
+  .header {
+    overflow: unset; }
+
+  .header__ul-menu {
+    display: none; }
+
+  .btn--showMenu {
+    display: block; }
+
+  .header--container ul {
+    margin-left: 0; } }
+/* ------------------------------------------------------------------------------------------------ */
+/* --- --- -- ABOUT-ME -- --- --- */
+.section__container {
+  overflow: hidden;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  background-color: #353c5a; }
+
+#about-me {
+  height: 80px;
+  color: white;
+  font-size: 13px; }
+
+.container--footer {
+  width: 80%;
+  align-self: center;
+  height: 50px;
+  border-top: dashed 1.5px white;
+  border-bottom: dashed 1.5px white;
+  justify-content: space-between; }
+
+#heart {
+  color: lightcoral; }
+
+.social {
+  justify-content: space-around;
+  width: 180px; }
+
+.social a {
+  color: white;
+  font-size: 20px; }
+
+.social a:hover {
+  border-bottom: solid 2px white; }
+
+#icons {
+  margin-left: 5px; }
+
+/* ------------------------------------------------------------------------------------------------ */
+/* --- --- -- RESPONSIVE DESIGN -- --- --- */
+@media screen and (max-width: 600px) {
+  .container--footer {
+    padding: 6px;
+    flex-direction: column; } }
+/* ------------------------------------------------------------------------------------------------ */
+/* --- --- -- CARDS -- --- --- */
+.character__grid {
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap; }
+
+.character--card {
+  width: 260px;
+  height: 370px;
+  margin: 20px;
+  background-color: white;
+  border-radius: 6px;
+  padding: 15px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left; }
+  .character--card img {
+    object-fit: cover;
+    width: 240px;
+    height: 240px;
+    align-self: center; }
+
+.card--details {
+  height: 80px;
+  margin-top: 20px;
+  color: gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; }
+
+.card-status--name {
+  margin-left: 1px; }
+
+.alive {
+  color: #a2d0c1; }
+
+.dead {
+  color: #e97878; }
+
+/* ------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------ */
+/* --- --- -- MAIN SECTION -- --- --- */
+.container {
+  background-color: #262b41;
+  overflow: hidden;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap; }
+
+.container__section {
+  width: 100%;
+  padding: 35px 0 35px 0;
+  justify-content: center; }
+  .container__section img {
+    width: 500px;
+    object-fit: cover; }
+
+.container--details {
+  flex-direction: column;
+  width: 350px;
+  margin-left: 100px; }
+
+.main-title {
+  font-size: 1.5rem;
+  padding-top: 50px;
+  color: #b2fa9c;
+  font-family: "Lato", sans-serif;
+  font-weight: 500; }
+
+.main-desc {
+  font-size: 0.9rem;
+  padding-top: 15px;
+  color: #e7fff1;
+  text-align: justify;
+  width: 350px;
+  line-height: 30px;
+  font-family: "Lato", sans-serif; }
+  .main-desc a {
+    text-decoration: none;
+    color: #fbaccc; }
+  .main-desc a:hover {
+    text-decoration: underline;
+    color: #a4ebf3; }
+
+/* ------------------------------------------------------------------------------------------------ */
+/* --- --- -- SEARCH SECTION -- --- --- */
+.container__search {
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  width: 80%;
+  height: 100px;
+  margin-bottom: 50px; }
+  .container__search h3 {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-size: 25px;
+    color: white; }
+
+::placeholder {
+  color: white;
+  font-size: 1em; }
+
+.container--search {
+  width: 500px;
+  border-radius: 10px;
+  border-left: solid 2px #ff8882; }
+
+.search__bar {
+  justify-content: space-between;
+  border: 2px solid white;
+  border-radius: 10px; }
+
+.bar--input {
+  width: 400px;
+  height: 40px;
+  margin-left: 15px;
+  border-radius: 10px;
+  color: white;
+  border: none;
+  caret-color: #b2fa9c;
+  background-color: unset; }
+
+.bar--button {
+  width: 50px;
+  height: 45px;
+  border-radius: 6px;
+  color: white;
+  background-color: #ff8882;
+  cursor: pointer;
+  outline: none;
+  border: none; }
+
+/* ------------------------------------------------------------------------------------------------ */
+/* --- --- -- CHARACTERS SECTION -- --- --- */
+.character__container {
+  overflow: hidden;
+  width: 100%;
+  background-color: #262b41;
+  padding-bottom: 50px;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap; }
+
+.character--title {
+  font-size: 2rem;
+  padding-top: 50px;
+  color: white;
+  margin-bottom: 10px; }
+
+.refresh_Button {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; }
+
+#btn-r {
+  background-color: #b2fa9c;
+  color: white;
+  border-radius: 50px;
+  padding: 5px 32px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-color: transparent;
+  text-decoration: none; }
+
+#btn-r:hover {
+  background-color: #ff8882; }
+
+/* ------------------------------------------------------------------------------------------------ */
+/* --- --- -- RESPONSIVE DESIGN -- --- --- */
+@media screen and (max-width: 890px) {
+  .container__section {
+    flex-direction: column; }
+
+  .main-desc {
+    width: 500px; }
+
+  .container--details {
+    margin-left: 0;
+    width: 100%; } }
+@media screen and (max-width: 550px) {
+  .main-desc {
+    width: 90%; }
+
+  .search__bar {
+    width: 100%; }
+
+  .container--search {
+    width: 90%; } }
+/* ------------------------------------------------------------------------------------------------ */
+
+/*# sourceMappingURL=main.css.map */

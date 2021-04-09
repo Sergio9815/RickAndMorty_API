@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png type" href="./assets/images/2_logo-rick.png" />
+    <link rel="stylesheet" href="./styles/css/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <title>Characters</title>
+  </head>
+
+  <body>
+
+    <!-- ---------- CHARACTERS SECTION ---------- -->
+
+    <div id="app">
+
+      <header-menu v-on:show-menu="toggleMenu" v-bind:elements="data"></header-menu>
+
+      <main class="character__container" Access-Control-Allow-Origin: https://rickandmortyapi.com />
+        <h3 tabindex="0" class="character--title"> {{data.title_ch}} </h3>
+
+        <cards v-bind:charact="charact"></cards>
+
+        <section class="refresh_Button">
+          <button id="btn-r" onclick="location.reload()"><i class="fas fa-redo"></i> REFRESH</button>
+        </section>
+      </main>
+
+      <!-- CONTACT SECTION -->
+      <about></about>
+      
+    </div>
+
+    <!-- REFERENCIA A VUE JS USANDO CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script type="module" src="./utils/characters.js"></script>
+  </body>
+
+</html>
