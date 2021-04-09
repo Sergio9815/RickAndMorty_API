@@ -2,7 +2,7 @@ import apiRequest from './utils/fetch.js';
 
 /* ---------- IMPORT COMPONENTS ---------- */
 import headerMenu from './components/headerMenu.js'
-import found_character from './components/found_character.js'
+import foundCharacter from './components/foundCharacter.js'
 import about from './components/about.js'
 
 /* ---------- API URL ---------- */
@@ -75,7 +75,7 @@ new Vue({
 
   components: {
     'headerMenu': headerMenu,
-    'found_character': found_character,
+    'foundCharacter': foundCharacter,
     'about': about,
   },
 
