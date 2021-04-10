@@ -35,15 +35,13 @@
   @extend %flex;
   justify-content: space-around;
   width: 180px;
-}
-
-.social a {
-  color: $color-white;
-  font-size: 20px;
-}
-
-.social a:hover {
-  border-bottom: solid 2px $color-white;
+  a {
+    color: $color-white;
+    font-size: 20px;
+  }
+  a:hover {
+    border-bottom: solid 2px $color-white;
+  }
 }
 
 #icons {

@@ -46,21 +46,20 @@
   justify-content: space-between; }
   .header--container h1 {
     margin-left: 40px; }
-
-.header--container ul {
-  list-style: none;
-  margin-left: 100px;
-  align-self: center; }
-  .header--container ul li {
-    float: left;
-    padding-left: 20px; }
-    .header--container ul li a {
-      color: white;
-      text-decoration: none;
-      letter-spacing: 2px;
-      font-size: 15px; }
-    .header--container ul li a:hover {
-      border-bottom: 2px solid white; }
+  .header--container ul {
+    list-style: none;
+    margin-left: 100px;
+    align-self: center; }
+    .header--container ul li {
+      float: left;
+      padding-left: 20px; }
+      .header--container ul li a {
+        color: white;
+        text-decoration: none;
+        letter-spacing: 2px;
+        font-size: 15px; }
+      .header--container ul li a:hover {
+        border-bottom: 2px solid white; }
 
 .menuActive {
   border-bottom: 1px solid rgba(121, 219, 255, 0.5); }
@@ -140,13 +139,11 @@
 .social {
   justify-content: space-around;
   width: 180px; }
-
-.social a {
-  color: white;
-  font-size: 20px; }
-
-.social a:hover {
-  border-bottom: solid 2px white; }
+  .social a {
+    color: white;
+    font-size: 20px; }
+  .social a:hover {
+    border-bottom: solid 2px white; }
 
 #icons {
   margin-left: 5px; }
@@ -192,12 +189,6 @@
 
 .card-status--name {
   margin-left: 1px; }
-
-.alive {
-  color: #a2d0c1; }
-
-.dead {
-  color: #e97878; }
 
 /* ------------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------------ */

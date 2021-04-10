@@ -2,7 +2,6 @@ export default {
   name: 'headerMenu',
   props: ['elements'],
   data() { return {} },
-
   methods: {
     showMenu () {
       this.$emit('show-menu')

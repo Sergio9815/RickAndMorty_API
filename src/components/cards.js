@@ -1,11 +1,7 @@
 export default {
   name: 'cards',
   props: ['charact'],
-  data() {
-    return {
-    }
-  },
-
+  data() { return { } },
   template: `
         <section class="character__grid" id="character--container">
             <div  v-for="(item, i) in charact" class="character--card">

@@ -69,7 +69,6 @@ new Vue({
         isActive: 0,
         showFloat: false,
       },
-      // ch_alive: true,
     }
   },
 
@@ -98,15 +97,6 @@ new Vue({
       }
     },
 
-    // changeColorStatus(stat) {
-    //   if (stat === 'ALIVE') {
-    //     this.ch_alive = true;
-    //   }
-    //   else if (stat === 'DEAD') {
-    //     this.ch_alive = false;
-    //   }
-    // },
-
     showData(person) {
       /* ---------- MAKE REQUEST ---------- */
       let fetch = new apiRequest();
@@ -115,19 +105,17 @@ new Vue({
         .then(characters => {
           try {
 
+            /* ---------- INSERT DATA INTO CARDS ---------- */
             if (url.search('=') > 0) {
               var character = characters.results[0];
 
-              /* ---------- INSERT DATA INTO CARDS ---------- */
               this.data.name = `Name: ${character.name}`;
               this.data.image = character.image;
               this.data.status = `Status: ${character.status}`;
               this.data.species = `Species: ${character.species}`;
               this.data.origin = `Origin: ${character.origin.name}`;
-              //this.changeColorStatus(this.data.status.toUpperCase())
             }
             else {
-              /* ---------- INSERT DATA INTO CARDS ---------- */
               this.data.name = `Name: ${characters.name}`;
               this.data.image = characters.image;
               this.data.status = `Status: ${characters.status}`;

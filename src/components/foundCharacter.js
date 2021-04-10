@@ -1,17 +1,12 @@
 export default { 
   name: 'foundCharacter', 
   props: ['elements'],
-  data() {
-    return {
-
-    }
-  },
-
+  data() { return { } },
   methods: {
     close() {
       this.$emit('close-found_character')
     }
-  }, //v-bind:class="{ 'dead': ch_alive }"
+  }, 
 
   template: `
     <div class="found_character-mask">

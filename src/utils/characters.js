@@ -57,8 +57,6 @@ new Vue({
             this.charact[i].status = `Status: ${character.status}`;
             this.charact[i].species = `Species: ${character.species}`;
             this.charact[i].origin = `Origin: ${character.origin.name}`;
-
-            //this.changeColorStatus(this.charact[i].status.toUpperCase())
           }
         } catch (error) {
           console.log(error);
@@ -84,16 +82,6 @@ new Vue({
     getRandom(min, max) {
       return Math.random() * (max - min) + min;
     },
-
-    // changeColorStatus(stat) {
-    //   if (stat  === 'ALIVE') {
-    //     this.ch_alive = true;
-    //   } 
-    //   else if (stat  === 'DEAD'){
-    //     this.ch_alive = false;
-    //   }
-    // },
-
   },
 
 })
