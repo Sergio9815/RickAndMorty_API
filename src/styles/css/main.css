@@ -45,6 +45,7 @@
   width: 80%;
   justify-content: space-between; }
   .header--container h1 {
+    font-size: 25px;
     margin-left: 40px; }
   .header--container ul {
     list-style: none;
@@ -134,6 +135,7 @@
   justify-content: space-between; }
 
 #heart {
+  font-size: 14px;
   color: lightcoral; }
 
 .social {
