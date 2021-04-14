@@ -30,6 +30,7 @@
 }
 
 .container--details {
+  font-family: "Lato", sans-serif;
   @extend %flex;
   flex-direction: column;
   width: 350px;
@@ -40,19 +41,18 @@
   font-size: 1.5rem;
   padding-top: 50px;
   color: $color-title;
-  font-family: "Lato", sans-serif;
   font-weight: 500;
+  font-family: inherit;
 }
 
 .main-desc {
+  font-family: inherit;
   font-size: 0.9rem;
   padding-top: 15px;
   color: $color-font;
   text-align: justify;
   width: 350px;
   line-height: 30px;
-  font-family: "Lato", sans-serif;
-
   a {
     text-decoration: none;
     color: $color-Link;
@@ -125,6 +125,12 @@
   border: none;
 }
 
+.bar--button:hover {
+  background-color: $color-title;
+}
+
+
+
 /* ------------------------------------------------------------------------------------------------ */
 
 /* --- --- -- CHARACTERS SECTION -- --- --- */
@@ -156,7 +162,7 @@
 
 #btn-r {
   background-color: $color-title;
-  color: $color-white;
+  color: $color-back;
   border-radius: 50px;
   padding: 5px 32px;
   font-weight: bold;
