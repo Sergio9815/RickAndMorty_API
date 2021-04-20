@@ -4,7 +4,7 @@ export default {
   template: `
       <footer class="section__container" id="about-me">
         <div class="container--footer">
-          <p>Sitio web diseñado por Sergio González </a><i class="fas fa-heart" id="heart"></i> </p>
+          <p>Sitio web diseñado por Sergio González <i class="fas fa-heart" id="heart"></i> </p>
           <div class="social">
             Seamos amigos:
             <a id="icons" href="https://www.instagram.com/sagb_24/"><i class="fab fa-instagram"></i></a>
